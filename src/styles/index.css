@@ -1,12 +1,92 @@
+body {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-size: 24px;
+}
 
-/* 
+h1 {
+  font-size: 84px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Arial", sans-serif; /* Cambiar la fuente a Arial o a la fuente deseada */
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
 
-*/
+ul {
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0; 
+  padding: 20px; 
+  border-radius: 10px;
+  position: relative;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+li:hover {
+  background-color: #e0e0e0;
+}
+
+button.delete {
+  background-color: #ff4d4d;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 20px; 
+  cursor: pointer;
+}
+
+button.delete:hover {
+  background-color: #f44336;
+}
+
+.delete-button {
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  cursor: pointer;
+}
+
+li:hover .delete-button {
+  display: block;
+}
+
+input.show-delete-button {
+  margin-top: 20px;
+  font-size: 20px; 
+}
+
+input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px; 
+  font-size: 20px; 
+  border: 1px solid #ddd;
+  color: black;
+  cursor: text;
+}
+
+.total-tasks {
+  font-size: 20px; 
+  text-align: right; 
+  color: #666;
+  margin-top: 10px; 
+}
